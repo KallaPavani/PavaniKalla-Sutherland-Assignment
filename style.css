@@ -1,0 +1,188 @@
+ /* This is to give the smooth behaviour to the website when user click on any buttons or anchor tags */
+        
+        html {
+            scroll-behavior: smooth;
+        }       
+/* Base styling for the entire webpage */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: linear-gradient(to bottom right, #dccdcd, #ddd);
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        /* Styling for the header section */
+        header {
+            background: linear-gradient(to right, #181f26, #007aff);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures the header stays above other content */
+        }
+
+        /* Navigation bar styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #2e0435;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Changes color on hover */
+        }
+
+        /* Hero section with a background image */
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            color: rgb(4, 43, 34);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 80%;
+            margin: auto;
+            color: black;
+            text-align: justify;
+            margin-top: 2em;
+        }
+ span {
+            background: brown;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold;
+            animation: years .5s infinite;
+        }
+        
+       
+        /* Animation for the span element */
+        @keyframes years {
+            from { background: brown; }
+            to { background: rgb(97, 23, 91); }
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* About section with embedded video */
+        #about h2 {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            border-radius: 10px;
+        }
+
+        /* Contact form styling */
+        .contact-form {
+            padding: 2rem;
+            background: #fff;
+            max-width: 90%;
+            margin: 2rem auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Styling for submit button */
+        .contact-form button {
+            display: block;
+            min-width: 10%;
+            padding: 0.75rem;
+            background: aqua;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: .5s;
+          box-shadow:1px 2px 1px 1px black;
+        }
+
+        .contact-form button:hover {
+            background: #005bb5;
+            color: wheat;
+        }
+
+        /* Footer styling */
+        footer {
+            background: linear-gradient(to right, #4a90e2, #007aff);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            nav { flex-direction: column; align-items: center; }
+            .contact-form { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 3rem 1rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 0.9rem; }
+            iframe { height: 250px; }
+        }
+    
